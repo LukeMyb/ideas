@@ -1,0 +1,21 @@
+# ローカルディレクトリをGitリポジトリとして初期化
+git init
+
+# 初期ファイル（READMEなど）を作成（すでに何らかのファイルがある場合は省略可）
+touch README.md
+
+# ディレクトリ内のすべての変更をステージング（コミットの準備）
+git add .
+
+# ローカルリポジトリに初回コミットを保存
+git commit -m "Initial commit"
+
+# 現在のブランチ名を「main」に変更
+git branch -M main
+
+# リモートリポジトリのURLを「origin」という名前で登録
+git remote add origin <リモートリポジトリのURL>
+
+# リモートリポジトリ（origin）のmainブランチへプッシュ
+# ※ -u オプションをつけることで、次回以降は「git push」だけで済む
+git push -u origin main
